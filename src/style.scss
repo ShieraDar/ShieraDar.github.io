@@ -1,0 +1,131 @@
+$gray-theme: #e6e8e8;
+$white: #fff;
+$red: #ed1f28;
+$light-blue: #3baee5;
+$dark-blue: #345fac;
+
+#app {
+    font-family: Avenir, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    color: #2c3e50;
+}
+
+.fixed_top{
+    position: fixed;
+    top: 0;
+    z-index: 1030;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+    max-width: 100vw;
+    width: 100vw;
+    background-color: $white;
+    
+    .logo{
+        height: 50px;
+    }
+}
+
+.dropdown{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.dropbtn{
+    max-width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 1px darkgray;
+    padding: 5px;
+    .bar{
+        width: 35px;
+        height: 5px;
+        background-color: black;
+        margin: 3px 0;
+    }
+}
+
+.nav_list {
+    position: fixed;
+    top: 100px;
+    right: 20vw;
+    display: flex;
+    flex-direction: column;
+    background-color: $gray-theme;
+    border-bottom: solid 1px gray;
+    border-left: solid 1px gray;
+    border-right: solid 1px gray;
+    a{
+        border-top: solid 1px gray;
+        background-color: $gray-theme;
+        padding: 5px 25px 5px 5px;
+        display: block;
+        color: gray;
+        font-size: 1.5em;
+        text-decoration: none;
+    }
+    a:hover{
+        background-color: darkgray;
+    }
+}
+
+.content{
+    margin-top: 90px;
+}
+
+.fade-enter-active{
+    transition: all .8s ease;
+}
+.fade-leave-active {
+    transition: all .8s cubic-bezier(1.0, 0.5, 0.8, 1.0);        
+}
+.fade-enter {
+    transform: translateY(10px);
+    opacity: 0;
+}
+.fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+    transform: translateY(-10px);
+    opacity: 0;
+}
+
+@media screen and (max-width: 850px) {
+    .nav_list a{
+        color: black;
+        font-size: 1.3em;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .fixed_top{
+        position: relative;
+        top: 0;
+    }
+    
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        max-width: 100vw;
+    }
+
+    .nav_list {
+        a{
+            font-size: 1.2em;
+        }
+    }
+}
