@@ -33,6 +33,13 @@ nav{
     
     .logo{
         height: 50px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        .corp{
+            margin: 10px;
+        }
     }
 }
 

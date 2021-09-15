@@ -1,7 +1,11 @@
 <template>
     <nav class="fixed_top">
-        <div>
+        <div class="logo">
             <img src="../../assets/logo.png" class="logo" alt="" srcset="">
+            <div class="corp">
+                Naga Surya Elektrindo<br>
+                Naga Mas Jaya 
+            </div>
         </div>
         <div class="dropdown" v-on:click="changeMenuStatus">
             <button class="dropbtn">
@@ -10,8 +14,9 @@
             <div class="bar"></div>
             </button>
         </div>
-        </nav>
-        <transition name="fade">
+    </nav>
+
+    <transition name="fade">
         <div class="nav_list" v-if="showMenu">
             <a href="#product" v-on:click="moveToSpecificArea('product')">Product</a>
             <a href="#about" v-on:click="moveToSpecificArea('about')">About</a>
